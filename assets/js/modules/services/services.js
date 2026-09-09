@@ -1,4 +1,4 @@
-const ServicesModule = {
+﻿const ServicesModule = {
 
     async render(selector) {
 
@@ -36,6 +36,11 @@ const ServicesModule = {
 
     card(service) {
 
+        const serviceDetailUrl =
+            window.TRADE_SPHARE_CONFIG?.serviceDetailUrl ||
+            "/service/";
+
+
         return `
             <article class="service-card">
 
@@ -61,7 +66,7 @@ const ServicesModule = {
                     </p>
 
                     <a
-                        href="service.html?id=${service.id}"
+                        href="${serviceDetailUrl}?id=${service.id}"
                         class="service-card-link"
                     >
                         تعرف على الخدمة

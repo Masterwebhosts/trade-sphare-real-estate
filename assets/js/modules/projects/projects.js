@@ -1,19 +1,26 @@
 const ProjectsModule = {
+
     async render(selector) {
-        const container = document.querySelector(selector);
+
+        const container =
+            document.querySelector(selector);
 
         if (!container) {
             return;
         }
 
         try {
-            const data = await DataStore.get("projects");
 
-            container.innerHTML = data.items
-                .map(project => this.card(project))
-                .join("");
+            const data =
+                await DataStore.get("projects");
+
+            container.innerHTML =
+                data.items
+                    .map(project => this.card(project))
+                    .join("");
 
         } catch (error) {
+
             console.error(error);
 
             container.innerHTML = `
@@ -24,12 +31,14 @@ const ProjectsModule = {
         }
     },
 
+
     card(project) {
+
         return `
             <article class="project-card">
 
                 <a
-                    href="project.html?id=${project.id}"
+                    href="${window.TRADE_SPHARE_CONFIG.projectDetailUrl}?id=${project.id}"
                     class="project-card-media"
                 >
 
@@ -44,6 +53,7 @@ const ProjectsModule = {
                     </span>
 
                 </a>
+
 
                 <div class="project-card-body">
 
@@ -63,8 +73,9 @@ const ProjectsModule = {
                         ${project.location}
                     </div>
 
+
                     <a
-                        href="project.html?id=${project.id}"
+                        href="${window.TRADE_SPHARE_CONFIG.projectDetailUrl}?id=${project.id}"
                         class="project-card-link"
                     >
                         اكتشف المشروع
@@ -76,6 +87,9 @@ const ProjectsModule = {
             </article>
         `;
     }
+
 };
 
-window.ProjectsModule = ProjectsModule;
+
+window.ProjectsModule =
+    ProjectsModule;

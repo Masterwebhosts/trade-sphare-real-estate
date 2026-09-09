@@ -1,4 +1,4 @@
-const PropertiesModule = {
+﻿const PropertiesModule = {
     async render(selector) {
         const container = document.querySelector(selector);
 
@@ -25,11 +25,18 @@ const PropertiesModule = {
     },
 
     card(property) {
+
+        const propertyDetailUrl =
+            window.TRADE_SPHARE_CONFIG?.propertyDetailUrl ||
+            "/property/";
+
         return `
             <article class="property-card">
 
-                <a href="property.html?id=${property.id}"
-                   class="property-card-media">
+                <a
+                    href="${propertyDetailUrl}?id=${property.id}"
+                    class="property-card-media"
+                >
 
                     <img
                         src="${property.image}"
@@ -72,7 +79,7 @@ const PropertiesModule = {
                         </strong>
 
                         <a
-                            href="property.html?id=${property.id}"
+                            href="${propertyDetailUrl}?id=${property.id}"
                             class="property-card-link"
                         >
                             التفاصيل

@@ -1,0 +1,281 @@
+﻿<?php
+/**
+ * About page template.
+ *
+ * @package Trade_Sphare_Real_Estate
+ */
+
+get_header();
+?>
+
+<main>
+
+<section class="page-hero">
+<div class="container">
+
+<div class="page-hero-content">
+
+<span class="section-eyebrow">
+من نحن
+</span>
+
+<h1>
+نبني قيمة عقارية
+تتجاوز حدود المشروع
+</h1>
+
+<p>
+نعمل على تطوير مشاريع عقارية تجمع بين
+جودة التصميم وكفاءة التنفيذ وفهم احتياجات
+السوق لبناء قيمة مستدامة للمستثمرين والمجتمعات.
+</p>
+
+</div>
+
+</div>
+</section>
+
+
+<section class="section">
+<div class="container">
+
+<div class="property-detail-grid">
+
+<div class="property-detail-media">
+
+<div class="media-placeholder">
+التطوير العقاري
+</div>
+
+</div>
+
+<div class="property-detail-content">
+
+<span class="section-eyebrow">
+رؤيتنا
+</span>
+
+<h2>
+تطوير عقاري قائم على
+الجودة والقيمة طويلة الأجل
+</h2>
+
+<p>
+نؤمن بأن التطوير العقاري الناجح لا يبدأ
+من البناء فقط بل من فهم الموقع والسوق
+واحتياجات المستخدم النهائي.
+</p>
+
+<p>
+لذلك نركز على بناء مشاريع ذات هوية واضحة
+وتخطيط مدروس وجودة تنفيذ وتجربة استخدام
+تضيف قيمة حقيقية إلى المكان والمجتمع.
+</p>
+
+</div>
+
+</div>
+
+</div>
+</section>
+
+
+<section class="section section-alt">
+<div class="container">
+
+<div class="section-heading">
+
+<span class="section-eyebrow">
+ما نؤمن به
+</span>
+
+<h2>
+مبادئ تقود قراراتنا
+</h2>
+
+<p>
+نضع مجموعة من المبادئ الأساسية في صميم
+كل مشروع وقرار استثماري.
+</p>
+
+</div>
+
+
+<div class="cards-grid">
+
+<article class="service-card">
+<span class="service-detail-number">01</span>
+
+<h3>
+الجودة
+</h3>
+
+<p>
+نركز على التفاصيل وجودة التنفيذ
+لضمان مشاريع موثوقة وقابلة للاستمرار.
+</p>
+</article>
+
+
+<article class="service-card">
+<span class="service-detail-number">02</span>
+
+<h3>
+القيمة
+</h3>
+
+<p>
+نبحث عن فرص التطوير التي تحقق قيمة
+حقيقية للمستثمر والمستخدم والسوق.
+</p>
+</article>
+
+
+<article class="service-card">
+<span class="service-detail-number">03</span>
+
+<h3>
+الاستدامة
+</h3>
+
+<p>
+نخطط للمشاريع بمنظور طويل الأجل
+يوازن بين العائد والجودة واستدامة القيمة.
+</p>
+</article>
+
+
+<article class="service-card">
+<span class="service-detail-number">04</span>
+
+<h3>
+الشفافية
+</h3>
+
+<p>
+نحرص على وضوح المعلومات والتواصل
+الفعال في مختلف مراحل المشروع.
+</p>
+</article>
+
+</div>
+
+</div>
+</section>
+
+
+<section class="section">
+<div class="container">
+
+<div class="section-heading">
+
+<span class="section-eyebrow">
+خبراتنا
+</span>
+
+<h2>
+منظومة متكاملة للتطوير العقاري
+</h2>
+
+</div>
+
+
+<div class="cards-grid">
+
+<article class="service-card">
+
+<h3>
+دراسة وتقييم الفرص
+</h3>
+
+<p>
+تحليل المواقع والفرص الاستثمارية
+ودراسة الجدوى قبل اتخاذ قرارات التطوير.
+</p>
+
+</article>
+
+
+<article class="service-card">
+
+<h3>
+تطوير المشاريع
+</h3>
+
+<p>
+تحويل الأفكار والمخططات إلى مشاريع
+عقارية متكاملة ذات هوية واضحة.
+</p>
+
+</article>
+
+
+<article class="service-card">
+
+<h3>
+إدارة القيمة
+</h3>
+
+<p>
+التركيز على تحقيق أفضل قيمة ممكنة
+عبر مختلف مراحل دورة حياة المشروع.
+</p>
+
+</article>
+
+</div>
+
+</div>
+</section>
+
+
+<section class="section">
+<div class="container">
+
+<div class="cta">
+
+<div>
+
+<span class="section-eyebrow">
+لنبدأ
+</span>
+
+<h2>
+لديك فرصة أو مشروع عقاري
+</h2>
+
+<p>
+تحدث معنا لمناقشة الفكرة ودراسة
+إمكانية تحويلها إلى مشروع قابل للنمو.
+</p>
+
+</div>
+
+<div class="hero-actions">
+
+<a
+href="<?php echo esc_url( home_url( '/contact/' ) ); ?>"
+class="button button-primary"
+>
+تواصل معنا
+</a>
+
+<a
+href="<?php echo esc_url( home_url( '/projects/' ) ); ?>"
+class="button button-secondary"
+>
+استكشف مشاريعنا
+</a>
+
+</div>
+
+</div>
+
+</div>
+</section>
+
+</main>
+
+<?php
+get_footer();
+?>

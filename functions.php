@@ -373,3 +373,5 @@ add_action(
 	'wp_enqueue_scripts',
 	'trade_sphare_real_estate_enqueue_assets'
 );
+
+require_once get_template_directory() . '/inc/setup/class-page-installer.php';

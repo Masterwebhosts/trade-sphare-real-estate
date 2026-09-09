@@ -23,8 +23,7 @@ document.addEventListener("DOMContentLoaded", async () => {
          */
 
         if (
-            document.querySelector("#property-detail") &&
-            window.PropertyDetailModule
+            document.querySelector("#property-detail")
         ) {
 
             await PropertyDetailModule.init();
@@ -42,8 +41,7 @@ document.addEventListener("DOMContentLoaded", async () => {
          */
 
         if (
-            document.querySelector("#properties-filters") &&
-            window.PropertiesFilter
+            document.querySelector("#properties-filters")
         ) {
 
             await PropertiesFilter.init();
@@ -61,8 +59,7 @@ document.addEventListener("DOMContentLoaded", async () => {
          */
 
         if (
-            document.querySelector("#project-detail") &&
-            window.ProjectDetailModule
+            document.querySelector("#project-detail")
         ) {
 
             await ProjectDetailModule.init();
@@ -80,8 +77,7 @@ document.addEventListener("DOMContentLoaded", async () => {
          */
 
         if (
-            document.querySelector("#projects-filters") &&
-            window.ProjectsFilter
+            document.querySelector("#projects-filters")
         ) {
 
             await ProjectsFilter.init();
@@ -99,8 +95,7 @@ document.addEventListener("DOMContentLoaded", async () => {
          */
 
         if (
-            document.querySelector("#service-detail") &&
-            window.ServiceDetailModule
+            document.querySelector("#service-detail")
         ) {
 
             await ServiceDetailModule.init();
@@ -118,8 +113,7 @@ document.addEventListener("DOMContentLoaded", async () => {
          */
 
         if (
-            document.querySelector("#services-list") &&
-            window.ServicesModule
+            document.querySelector("#services-list")
         ) {
 
             await ServicesModule.render(
@@ -139,8 +133,7 @@ document.addEventListener("DOMContentLoaded", async () => {
          */
 
         if (
-            document.querySelector("#contact-form") &&
-            window.ContactModule
+            document.querySelector("#contact-form")
         ) {
 
             ContactModule.init();
@@ -157,89 +150,25 @@ document.addEventListener("DOMContentLoaded", async () => {
          * Home
          */
 
-        const featuredProperties =
-            document.querySelector(
+        await Promise.all([
+
+            PropertiesModule.render(
                 "#featured-properties"
-            );
+            ),
 
-        const featuredProjects =
-            document.querySelector(
+            ProjectsModule.render(
                 "#featured-projects"
-            );
+            ),
 
-        const featuredServices =
-            document.querySelector(
+            ServicesModule.render(
                 "#featured-services"
-            );
+            )
 
+        ]);
 
-        const isHomePage =
-            featuredProperties ||
-            featuredProjects ||
-            featuredServices;
-
-
-        if (isHomePage) {
-
-            const tasks = [];
-
-
-            if (
-                featuredProperties &&
-                window.PropertiesModule
-            ) {
-
-                tasks.push(
-                    PropertiesModule.render(
-                        "#featured-properties"
-                    )
-                );
-            }
-
-
-            if (
-                featuredProjects &&
-                window.ProjectsModule
-            ) {
-
-                tasks.push(
-                    ProjectsModule.render(
-                        "#featured-projects"
-                    )
-                );
-            }
-
-
-            if (
-                featuredServices &&
-                window.ServicesModule
-            ) {
-
-                tasks.push(
-                    ServicesModule.render(
-                        "#featured-services"
-                    )
-                );
-            }
-
-
-            await Promise.all(tasks);
-
-
-            console.info(
-                "Home page initialized."
-            );
-
-            return;
-        }
-
-
-        /*
-         * Static page
-         */
 
         console.info(
-            "Static page initialized."
+            "Real Estate Development application initialized."
         );
 
     } catch (error) {

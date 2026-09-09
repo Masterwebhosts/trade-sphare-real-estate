@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="استكشف مشاريع التطوير العقاري السكنية والتجارية ومتعددة الاستخدامات وتعرف على تفاصيل كل مشروع وموقعه وحالته."
+    >
+
+    <meta
+        name="robots"
+        content="index, follow"
+    >
+
+    <meta
+        name="theme-color"
+        content="#173f32"
+    >
+
+    <title>المشاريع العقارية | قالب التطوير العقاري</title>
+
+    <link
+        rel="stylesheet"
+        href="assets/css/main.css"
+    >
+</head>
+
+<body>
+
+    <header class="site-header">
+
+        <div class="container">
+
+            <nav
+                class="site-nav"
+                aria-label="التنقل الرئيسي"
+            >
+
+                <a
+                    href="index.html"
+                    class="site-logo"
+                >
+                    قالب التطوير العقاري
+                </a>
+
+                <div class="site-menu">
+
+                    <a href="index.html">
+                        الرئيسية
+                    </a>
+
+                    <a href="properties.html">
+                        العقارات
+                    </a>
+
+                    <a
+                        href="projects.html"
+                        aria-current="page"
+                    >
+                        المشاريع
+                    </a>
+
+                    <a href="services.html">
+                        الخدمات
+                    </a>
+
+                    <a href="about.html">
+                        من نحن
+                    </a>
+
+                    <a href="contact.html">
+                        اتصل بنا
+                    </a>
+
+                </div>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <section class="page-hero">
+
+            <div class="container">
+
+                <div class="page-hero-content">
+
+                    <span class="section-eyebrow">
+                        مشاريع التطوير العقاري
+                    </span>
+
+                    <h1>
+                        مشاريع نبني بها قيمة مستدامة
+                    </h1>
+
+                    <p>
+                        استكشف مجموعة من المشاريع العقارية
+                        السكنية والتجارية ومتعددة الاستخدامات.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section
+            class="section"
+            aria-labelledby="projects-title"
+        >
+
+            <div class="container">
+
+                <div class="section-header">
+
+                    <div>
+
+                        <span class="section-eyebrow">
+                            محفظة المشاريع
+                        </span>
+
+                        <h2 id="projects-title">
+                            المشاريع الحالية والقادمة
+                        </h2>
+
+                    </div>
+
+                    <p
+                        id="projects-count"
+                        class="properties-count"
+                        aria-live="polite"
+                    >
+                        جاري تحميل المشاريع...
+                    </p>
+
+                </div>
+
+
+                <form
+                    id="projects-filters"
+                    class="property-filters"
+                >
+
+                    <div class="property-filter-field">
+
+                        <label for="project-search">
+                            البحث
+                        </label>
+
+                        <input
+                            type="search"
+                            id="project-search"
+                            placeholder="ابحث باسم المشروع أو الموقع..."
+                            autocomplete="off"
+                        >
+
+                    </div>
+
+
+                    <div class="property-filter-field">
+
+                        <label for="project-category">
+                            التصنيف
+                        </label>
+
+                        <select id="project-category">
+
+                            <option value="">
+                                جميع التصنيفات
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="property-filter-field">
+
+                        <label for="project-status">
+                            الحالة
+                        </label>
+
+                        <select id="project-status">
+
+                            <option value="">
+                                جميع الحالات
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="property-filter-field">
+
+                        <label for="project-location">
+                            الموقع
+                        </label>
+
+                        <select id="project-location">
+
+                            <option value="">
+                                جميع المواقع
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="property-filter-actions">
+
+                        <button
+                            type="submit"
+                            class="btn btn-primary"
+                        >
+                            تطبيق البحث
+                        </button>
+
+                        <button
+                            type="button"
+                            id="project-reset"
+                            class="btn btn-secondary"
+                        >
+                            إعادة التعيين
+                        </button>
+
+                    </div>
+
+                </form>
+
+
+                <div
+                    id="projects-list"
+                    class="cards-grid cards-grid-2"
+                >
+                </div>
+
+
+                <div
+                    id="projects-empty"
+                    class="property-empty"
+                    hidden
+                >
+
+                    <h3>
+                        لم يتم العثور على مشاريع
+                    </h3>
+
+                    <p>
+                        جرب تغيير كلمات البحث أو خيارات التصفية.
+                    </p>
+
+                    <button
+                        type="button"
+                        id="project-empty-reset"
+                        class="btn btn-secondary"
+                    >
+                        عرض جميع المشاريع
+                    </button>
+
+                </div>
+
+
+                <div
+                    id="projects-error"
+                    class="data-error"
+                    hidden
+                >
+                    تعذر تحميل المشاريع حاليا.
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer class="site-footer">
+
+        <div class="container">
+
+            <p>
+                © 2026 قالب التطوير العقاري
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <script src="assets/js/core/config.js"></script>
+    <script src="assets/js/core/utils.js"></script>
+    <script src="assets/js/core/data.js"></script>
+
+    <script src="assets/js/modules/projects/projects.js"></script>
+    <script src="assets/js/modules/projects/projects-filter.js"></script>
+
+    <script src="assets/js/core/app.js"></script>
+
+</body>
+
+</html>

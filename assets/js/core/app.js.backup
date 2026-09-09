@@ -1,0 +1,169 @@
+document.addEventListener("DOMContentLoaded", async () => {
+
+    document.documentElement.classList.add("app-ready");
+
+    try {
+
+        /*
+         * Property detail
+         */
+
+        if (
+            document.querySelector("#property-detail")
+        ) {
+
+            await PropertyDetailModule.init();
+
+            console.info(
+                "Property detail page initialized."
+            );
+
+            return;
+        }
+
+
+        /*
+         * Property listing
+         */
+
+        if (
+            document.querySelector("#properties-filters")
+        ) {
+
+            await PropertiesFilter.init();
+
+            console.info(
+                "Properties page initialized."
+            );
+
+            return;
+        }
+
+
+        /*
+         * Project detail
+         */
+
+        if (
+            document.querySelector("#project-detail")
+        ) {
+
+            await ProjectDetailModule.init();
+
+            console.info(
+                "Project detail page initialized."
+            );
+
+            return;
+        }
+
+
+        /*
+         * Project listing
+         */
+
+        if (
+            document.querySelector("#projects-filters")
+        ) {
+
+            await ProjectsFilter.init();
+
+            console.info(
+                "Projects page initialized."
+            );
+
+            return;
+        }
+
+
+        /*
+         * Service detail
+         */
+
+        if (
+            document.querySelector("#service-detail")
+        ) {
+
+            await ServiceDetailModule.init();
+
+            console.info(
+                "Service detail page initialized."
+            );
+
+            return;
+        }
+
+
+        /*
+         * Services listing
+         */
+
+        if (
+            document.querySelector("#services-list")
+        ) {
+
+            await ServicesModule.render(
+                "#services-list"
+            );
+
+            console.info(
+                "Services page initialized."
+            );
+
+            return;
+        }
+
+
+        /*
+         * Contact page
+         */
+
+        if (
+            document.querySelector("#contact-form")
+        ) {
+
+            ContactModule.init();
+
+            console.info(
+                "Contact page initialized."
+            );
+
+            return;
+        }
+
+
+        /*
+         * Home
+         */
+
+        await Promise.all([
+
+            PropertiesModule.render(
+                "#featured-properties"
+            ),
+
+            ProjectsModule.render(
+                "#featured-projects"
+            ),
+
+            ServicesModule.render(
+                "#featured-services"
+            )
+
+        ]);
+
+
+        console.info(
+            "Real Estate Development application initialized."
+        );
+
+    } catch (error) {
+
+        console.error(
+            "Application initialization failed:",
+            error
+        );
+
+    }
+
+});

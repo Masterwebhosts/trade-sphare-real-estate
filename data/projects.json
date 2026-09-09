@@ -1,0 +1,22 @@
+{
+    "items": [
+        {
+            "id": 1,
+            "title": "مشروع حدائق المستقبل",
+            "category": "مشروع سكني",
+            "status": "قيد التطوير",
+            "location": "الرياض المملكة العربية السعودية",
+            "description": "مجتمع سكني متكامل يجمع بين التصميم العصري وجودة الحياة والاستثمار طويل الأجل.",
+            "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1000&q=80"
+        },
+        {
+            "id": 2,
+            "title": "واجهة المدينة",
+            "category": "مشروع متعدد الاستخدامات",
+            "status": "قريبا",
+            "location": "جدة المملكة العربية السعودية",
+            "description": "وجهة عمرانية حديثة تجمع السكن والأعمال والخدمات في بيئة واحدة متكاملة.",
+            "image": "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1000&q=80"
+        }
+    ]
+}

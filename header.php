@@ -8,10 +8,10 @@
 <!doctype html>
 <html <?php language_attributes(); ?>>
 <head>
-	<meta charset="<?php bloginfo( 'charset' ); ?>">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="<?php bloginfo( 'charset' ); ?>">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<?php wp_head(); ?>
+        <?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
@@ -20,47 +20,68 @@
 
 <header class="site-header">
 
-	<div class="container">
+        <div class="container">
 
-		<nav class="site-nav" aria-label="التنقل الرئيسي">
+                <nav class="site-nav" aria-label="Primary navigation">
 
-			<a
-				href="<?php echo esc_url( home_url( '/' ) ); ?>"
-				class="site-logo"
-			>
-				<?php bloginfo( 'name' ); ?>
-			</a>
+                        <a
+                                href="<?php echo esc_url( home_url( '/' ) ); ?>"
+                                class="site-logo"
+                        >
+                                <?php
+                                $header_logo = get_theme_mod(
+                                        'trade_sphare_real_estate_header_logo'
+                                );
 
-			<div class="site-menu">
+                                $header_logo_width = absint(
+                                        get_theme_mod(
+                                                'trade_sphare_real_estate_header_logo_width',
+                                                160
+                                        )
+                                );
+                                ?>
 
-				<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
-					الرئيسية
-				</a>
+                                <?php if ( $header_logo ) : ?>
 
-				<a href="<?php echo esc_url( home_url( '/properties/' ) ); ?>">
-					العقارات
-				</a>
+                                        <?php
+                                        echo wp_get_attachment_image(
+                                                $header_logo,
+                                                'full',
+                                                false,
+                                                array(
+                                                        'class' => 'site-logo-image',
+                                                        'alt'   => get_bloginfo( 'name' ),
+                                                        'style' => 'width: ' . $header_logo_width . 'px; height: auto;',
+                                                )
+                                        );
+                                        ?>
 
-				<a href="<?php echo esc_url( home_url( '/projects/' ) ); ?>">
-					المشاريع
-				</a>
+                                <?php else : ?>
 
-				<a href="<?php echo esc_url( home_url( '/services/' ) ); ?>">
-					الخدمات
-				</a>
+                                        <?php bloginfo( 'name' ); ?>
 
-				<a href="<?php echo esc_url( home_url( '/about/' ) ); ?>">
-					من نحن
-				</a>
+                                <?php endif; ?>
 
-				<a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>">
-					تواصل معنا
-				</a>
+                        </a>
 
-			</div>
+                        <?php if ( get_theme_mod( 'trade_sphare_real_estate_header_menu', true ) ) : ?>
 
-		</nav>
+                                <?php
+                                wp_nav_menu(
+                                        array(
+                                                'theme_location' => 'primary',
+                                                'container'      => false,
+                                                'menu_class'     => 'site-menu',
+                                                'fallback_cb'    => false,
+                                        )
+                                );
+                                ?>
 
-	</div>
+                        <?php endif; ?>
+
+                </nav>
+
+        </div>
 
 </header>
+

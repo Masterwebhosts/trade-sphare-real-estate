@@ -1,3 +1,4 @@
+
 <?php
 /**
  * Automatically creates the pages required by the theme.
@@ -15,37 +16,38 @@ defined( 'ABSPATH' ) || exit;
  * @return void
  */
 function trade_sphare_real_estate_install_pages() {
+
     $required_pages = array(
         'properties' => array(
-            'title'    => 'العقارات',
+            'title'    => 'Properties',
             'template' => 'page-properties.php',
         ),
         'projects' => array(
-            'title'    => 'المشاريع',
+            'title'    => 'Projects',
             'template' => 'page-projects.php',
         ),
         'services' => array(
-            'title'    => 'الخدمات',
+            'title'    => 'Services',
             'template' => 'page-services.php',
         ),
         'about' => array(
-            'title'    => 'من نحن',
+            'title'    => 'About Us',
             'template' => 'page-about.php',
         ),
         'contact' => array(
-            'title'    => 'تواصل معنا',
+            'title'    => 'Contact Us',
             'template' => 'page-contact.php',
         ),
         'property' => array(
-            'title'    => 'تفاصيل العقار',
+            'title'    => 'Property Details',
             'template' => 'page-property.php',
         ),
         'project' => array(
-            'title'    => 'تفاصيل المشروع',
+            'title'    => 'Project Details',
             'template' => 'page-project.php',
         ),
         'service' => array(
-            'title'    => 'تفاصيل الخدمة',
+            'title'    => 'Service Details',
             'template' => 'page-service.php',
         ),
     );
@@ -53,6 +55,7 @@ function trade_sphare_real_estate_install_pages() {
     $installed_pages = array();
 
     foreach ( $required_pages as $slug => $page ) {
+
         $existing_page = get_page_by_path( $slug, OBJECT, 'page' );
 
         if ( $existing_page instanceof WP_Post ) {
@@ -81,10 +84,15 @@ function trade_sphare_real_estate_install_pages() {
         $installed_pages[ $slug ] = (int) $page_id;
     }
 
-    update_option( 'trade_sphare_real_estate_required_pages', $installed_pages, false );
+    update_option(
+        'trade_sphare_real_estate_required_pages',
+        $installed_pages,
+        false
+    );
 }
 
 add_action(
     'after_switch_theme',
     'trade_sphare_real_estate_install_pages'
 );
+

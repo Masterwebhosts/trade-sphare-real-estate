@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 /**
  * Properties page template.
  *

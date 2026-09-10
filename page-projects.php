@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 /**
  * Projects page template.
  *

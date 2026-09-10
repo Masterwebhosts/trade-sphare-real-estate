@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 /**
  * About page template.
  *

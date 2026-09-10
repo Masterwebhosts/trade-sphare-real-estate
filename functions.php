@@ -48,8 +48,17 @@ add_action(
 function trade_sphare_real_estate_enqueue_assets() {
 
         $theme_version      = wp_get_theme()->get( 'Version' );
+        $theme_dir          = get_template_directory();
         $theme_uri          = get_template_directory_uri();
         $project_detail_url = home_url( '/project/' );
+
+        $style_version = file_exists( $theme_dir . '/style.css' )
+                ? filemtime( $theme_dir . '/style.css' )
+                : $theme_version;
+
+        $main_css_version = file_exists( $theme_dir . '/assets/css/main.css' )
+                ? filemtime( $theme_dir . '/assets/css/main.css' )
+                : $theme_version;
 
 
         /*
@@ -62,14 +71,14 @@ function trade_sphare_real_estate_enqueue_assets() {
                 'trade-sphare-real-estate-style',
                 get_stylesheet_uri(),
                 array(),
-                $theme_version
+                $style_version
         );
 
         wp_enqueue_style(
                 'trade-sphare-real-estate-main',
                 $theme_uri . '/assets/css/main.css',
                 array( 'trade-sphare-real-estate-style' ),
-                $theme_version
+                $main_css_version
         );
 
 

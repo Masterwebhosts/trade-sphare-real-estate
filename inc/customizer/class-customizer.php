@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 /**
  * Theme Customizer bootstrap.
  */
@@ -42,5 +42,3 @@ add_action(
     'trade_sphare_real_estate_customizer_css',
     20
 );
-
-

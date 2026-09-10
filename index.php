@@ -10,165 +10,281 @@ get_header();
 
 <main>
 
-	<!-- Hero -->
-	<section class="hero">
 
-		<div class="container">
+<!-- Hero -->
+<?php if ( get_theme_mod( 'trade_sphare_real_estate_hero_enabled', true ) ) : ?>
 
-			<div class="hero-content">
+<section class="hero">
 
-				<span class="hero-eyebrow">
-					التطوير العقاري
+	<div class="container">
+
+		<div class="hero-content">
+
+			<span class="hero-eyebrow">
+				<?php
+				echo esc_html(
+					get_theme_mod(
+						'trade_sphare_real_estate_hero_eyebrow',
+						'Real Estate Development'
+					)
+				);
+				?>
+			</span>
+
+			<h1>
+				<?php
+				echo esc_html(
+					get_theme_mod(
+						'trade_sphare_real_estate_hero_title',
+						'Integrated Real Estate Solutions for a Better Future'
+					)
+				);
+				?>
+			</h1>
+
+			<p>
+				<?php
+				echo esc_html(
+					get_theme_mod(
+						'trade_sphare_real_estate_hero_description',
+						'A professional platform for showcasing properties, development projects, and real estate services in a clear, modern, and scalable way.'
+					)
+				);
+				?>
+			</p>
+
+			<div class="hero-actions">
+
+				<a
+					href="<?php echo esc_url( home_url( get_theme_mod( 'trade_sphare_real_estate_hero_primary_url', '/projects/' ) ) ); ?>"
+					class="btn btn-primary"
+				>
+					<?php
+					echo esc_html(
+						get_theme_mod(
+							'trade_sphare_real_estate_hero_primary_text',
+							'Explore Projects'
+						)
+					);
+					?>
+				</a>
+
+				<a
+					href="<?php echo esc_url( home_url( get_theme_mod( 'trade_sphare_real_estate_hero_secondary_url', '/properties/' ) ) ); ?>"
+					class="btn btn-secondary"
+				>
+					<?php
+					echo esc_html(
+						get_theme_mod(
+							'trade_sphare_real_estate_hero_secondary_text',
+							'Browse Properties'
+						)
+					);
+					?>
+				</a>
+
+			</div>
+
+		</div>
+
+	</div>
+
+</section>
+
+<?php endif; ?>
+
+
+<!-- Services -->
+<?php if ( get_theme_mod( 'trade_sphare_real_estate_services_enabled', true ) ) : ?>
+
+<section class="section">
+
+	<div class="container">
+
+		<div class="section-header">
+
+			<div>
+
+				<span class="section-eyebrow">
+					<?php
+					echo esc_html(
+						get_theme_mod(
+							'trade_sphare_real_estate_services_eyebrow',
+							'Our Services'
+						)
+					);
+					?>
 				</span>
 
-				<h1>
-					حلول عقارية متكاملة لبناء مستقبل أفضل
-				</h1>
-
-				<p>
-					منصة احترافية لعرض العقارات والمشاريع والخدمات العقارية
-					بطريقة واضحة حديثة وقابلة للتوسع.
-				</p>
-
-				<div class="hero-actions">
-
-					<a
-						href="<?php echo esc_url( home_url( '/projects/' ) ); ?>"
-						class="btn btn-primary"
-					>
-						استكشف المشاريع
-					</a>
-
-					<a
-						href="<?php echo esc_url( home_url( '/properties/' ) ); ?>"
-						class="btn btn-secondary"
-					>
-						تصفح العقارات
-					</a>
-
-				</div>
+				<h2>
+					<?php
+					echo esc_html(
+						get_theme_mod(
+							'trade_sphare_real_estate_services_title',
+							'Complete Real Estate Expertise'
+						)
+					);
+					?>
+				</h2>
 
 			</div>
 
+			<a
+				href="<?php echo esc_url( home_url( get_theme_mod( 'trade_sphare_real_estate_services_link_url', '/services/' ) ) ); ?>"
+				class="section-link"
+			>
+				<?php
+				echo esc_html(
+					get_theme_mod(
+						'trade_sphare_real_estate_services_link_text',
+						'View All Services'
+					)
+				);
+				?>
+			</a>
+
 		</div>
 
-	</section>
+		<div
+			id="featured-services"
+			class="cards-grid cards-grid-3"
+		></div>
+
+	</div>
+
+</section>
+
+<?php endif; ?>
 
 
-	<!-- Services -->
-	<section class="section">
+<!-- Projects -->
+<?php if ( get_theme_mod( 'trade_sphare_real_estate_projects_enabled', true ) ) : ?>
 
-		<div class="container">
+<section class="section section-dark">
 
-			<div class="section-header">
+	<div class="container">
 
-				<div>
+		<div class="section-header section-header-light">
 
-					<span class="section-eyebrow">
-						خدماتنا
-					</span>
+			<div>
 
-					<h2>
-						خبرة عقارية متكاملة
-					</h2>
+				<span class="section-eyebrow">
+					<?php
+					echo esc_html(
+						get_theme_mod(
+							'trade_sphare_real_estate_projects_eyebrow',
+							'Development Projects'
+						)
+					);
+					?>
+				</span>
 
-				</div>
-
-				<a
-					href="<?php echo esc_url( home_url( '/services/' ) ); ?>"
-					class="section-link"
-				>
-					جميع الخدمات
-				</a>
+				<h2>
+					<?php
+					echo esc_html(
+						get_theme_mod(
+							'trade_sphare_real_estate_projects_title',
+							'Projects We Build for the Future'
+						)
+					);
+					?>
+				</h2>
 
 			</div>
 
-			<div
-				id="featured-services"
-				class="cards-grid cards-grid-3"
-			></div>
+			<a
+				href="<?php echo esc_url( home_url( get_theme_mod( 'trade_sphare_real_estate_projects_link_url', '/projects/' ) ) ); ?>"
+				class="section-link"
+			>
+				<?php
+				echo esc_html(
+					get_theme_mod(
+						'trade_sphare_real_estate_projects_link_text',
+						'View All Projects'
+					)
+				);
+				?>
+			</a>
 
 		</div>
 
-	</section>
+		<div
+			id="featured-projects"
+			class="cards-grid cards-grid-2"
+		></div>
+
+	</div>
+
+</section>
+
+<?php endif; ?>
 
 
-	<!-- Projects -->
-	<section class="section section-dark">
+<!-- Properties -->
+<?php if ( get_theme_mod( 'trade_sphare_real_estate_properties_enabled', true ) ) : ?>
 
-		<div class="container">
+<section class="section">
 
-			<div class="section-header section-header-light">
+	<div class="container">
 
-				<div>
+		<div class="section-header">
 
-					<span class="section-eyebrow">
-						مشاريع التطوير
-					</span>
+			<div>
 
-					<h2>
-						مشاريع نصنع بها المستقبل
-					</h2>
+				<span class="section-eyebrow">
+					<?php
+					echo esc_html(
+						get_theme_mod(
+							'trade_sphare_real_estate_properties_eyebrow',
+							'Featured Properties'
+						)
+					);
+					?>
+				</span>
 
-				</div>
-
-				<a
-					href="<?php echo esc_url( home_url( '/projects/' ) ); ?>"
-					class="section-link"
-				>
-					جميع المشاريع
-				</a>
+				<h2>
+					<?php
+					echo esc_html(
+						get_theme_mod(
+							'trade_sphare_real_estate_properties_title',
+							'Properties Designed for Modern Living'
+						)
+					);
+					?>
+				</h2>
 
 			</div>
 
-			<div
-				id="featured-projects"
-				class="cards-grid cards-grid-2"
-			></div>
+			<a
+				href="<?php echo esc_url( home_url( get_theme_mod( 'trade_sphare_real_estate_properties_link_url', '/properties/' ) ) ); ?>"
+				class="section-link"
+			>
+				<?php
+				echo esc_html(
+					get_theme_mod(
+						'trade_sphare_real_estate_properties_link_text',
+						'View All Properties'
+					)
+				);
+				?>
+			</a>
 
 		</div>
 
-	</section>
+		<div
+			id="featured-properties"
+			class="cards-grid cards-grid-3"
+		></div>
 
+	</div>
 
-	<!-- Services -->
-	<section class="section">
+</section>
 
-		<div class="container">
+<?php endif; ?>
 
-			<div class="section-header">
-
-				<div>
-
-					<span class="section-eyebrow">
-						خدماتنا
-					</span>
-
-					<h2>
-						خبرة عقارية متكاملة
-					</h2>
-
-				</div>
-
-				<a
-					href="<?php echo esc_url( home_url( '/services/' ) ); ?>"
-					class="section-link"
-				>
-					جميع الخدمات
-				</a>
-
-			</div>
-
-			<div
-				id="featured-services-secondary"
-				class="cards-grid cards-grid-3"
-			></div>
-
-		</div>
-
-	</section>
 
 </main>
 
 <?php
 get_footer();
+?>

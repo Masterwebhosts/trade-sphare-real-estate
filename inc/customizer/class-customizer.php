@@ -16,7 +16,7 @@ require_once get_template_directory() . '/inc/customizer/sections/class-homepage
  */
 function trade_sphare_real_estate_customizer_css() {
 
-    $primary_color   = get_theme_mod(
+    $primary_color = get_theme_mod(
         'trade_sphare_real_estate_primary_color',
         '#173f32'
     );
@@ -26,9 +26,45 @@ function trade_sphare_real_estate_customizer_css() {
         '#c6a15b'
     );
 
+    $accent_color = get_theme_mod(
+        'trade_sphare_real_estate_accent_color',
+        '#2563eb'
+    );
+
+    $background_color = get_theme_mod(
+        'trade_sphare_real_estate_background_color',
+        '#f7f6f2'
+    );
+
+    $surface_color = get_theme_mod(
+        'trade_sphare_real_estate_surface_color',
+        '#ffffff'
+    );
+
+    $text_color = get_theme_mod(
+        'trade_sphare_real_estate_text_color',
+        '#26332e'
+    );
+
+    $heading_color = get_theme_mod(
+        'trade_sphare_real_estate_heading_color',
+        '#111827'
+    );
+
+    $border_color = get_theme_mod(
+        'trade_sphare_real_estate_border_color',
+        '#e2e0d8'
+    );
+
     $custom_css = ':root {
         --color-primary: ' . esc_attr( $primary_color ) . ';
         --color-gold: ' . esc_attr( $secondary_color ) . ';
+        --color-accent: ' . esc_attr( $accent_color ) . ';
+        --color-background: ' . esc_attr( $background_color ) . ';
+        --color-surface: ' . esc_attr( $surface_color ) . ';
+        --color-text: ' . esc_attr( $text_color ) . ';
+        --color-heading: ' . esc_attr( $heading_color ) . ';
+        --color-border: ' . esc_attr( $border_color ) . ';
     }';
 
     wp_add_inline_style(
@@ -42,3 +78,4 @@ add_action(
     'trade_sphare_real_estate_customizer_css',
     20
 );
+

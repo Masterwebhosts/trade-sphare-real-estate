@@ -25,7 +25,7 @@ const ProjectsModule = {
 
             container.innerHTML = `
                 <p class="data-error">
-                    تعذر تحميل المشاريع حاليا.
+                    Unable to load projects right now.
                 </p>
             `;
         }
@@ -54,7 +54,6 @@ const ProjectsModule = {
 
                 </a>
 
-
                 <div class="project-card-body">
 
                     <span class="project-card-category">
@@ -73,12 +72,11 @@ const ProjectsModule = {
                         ${project.location}
                     </div>
 
-
                     <a
                         href="${window.TRADE_SPHARE_CONFIG.projectDetailUrl}?id=${project.id}"
                         class="project-card-link"
                     >
-                        اكتشف المشروع
+                        Explore Project
                         <span aria-hidden="true">←</span>
                     </a>
 

@@ -3,23 +3,23 @@
         {
             "id": 1,
             "number": "01",
-            "category": "التطوير",
-            "title": "تطوير المشاريع",
-            "description": "تطوير المشاريع العقارية من الفكرة وحتى التنفيذ والإدارة."
+            "category": "Development",
+            "title": "Real Estate Development",
+            "description": "Real estate development services from initial concept through execution and project management."
         },
         {
             "id": 2,
             "number": "02",
-            "category": "الاستشارات",
-            "title": "الاستشارات العقارية",
-            "description": "دراسات وتحليلات تساعد المستثمرين والمطورين على اتخاذ قرارات أفضل."
+            "category": "Consulting",
+            "title": "Real Estate Consulting",
+            "description": "Research and analysis that help investors and developers make informed and effective decisions."
         },
         {
             "id": 3,
             "number": "03",
-            "category": "الاستثمار",
-            "title": "الاستثمار العقاري",
-            "description": "حلول استثمارية عقارية مدروسة تركز على القيمة والنمو المستدام."
+            "category": "Investment",
+            "title": "Real Estate Investment",
+            "description": "Strategic real estate investment solutions focused on long-term value and sustainable growth."
         }
     ]
 }

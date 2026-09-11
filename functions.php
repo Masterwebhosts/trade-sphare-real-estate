@@ -129,7 +129,7 @@ function trade_sphare_real_estate_enqueue_assets() {
                         ),
 
                         'projectDetailUrl' => trailingslashit(
-                                home_url( '/project/' )
+                                $project_detail_url
                         ),
 
                         'serviceDetailUrl' => trailingslashit(
@@ -141,6 +141,25 @@ function trade_sphare_real_estate_enqueue_assets() {
                         ),
                 )
         );
+
+
+        /*
+         * =========================
+         * Blog homepage
+         * =========================
+         */
+
+        if ( is_home() || is_page( 'blog' ) ) {
+
+                wp_enqueue_style(
+                        'trade-sphare-real-estate-blog',
+                        $theme_uri . '/assets/css/blog.css',
+                        array( 'trade-sphare-real-estate-main' ),
+                        file_exists( $theme_dir . '/assets/css/blog.css' )
+                                ? filemtime( $theme_dir . '/assets/css/blog.css' )
+                                : $theme_version
+                );
+        }
 
 
         /*
@@ -388,6 +407,10 @@ add_action(
         'trade_sphare_real_estate_enqueue_assets'
 );
 
+
+/**
+ * Load the theme page installer.
+ */
 require_once get_template_directory() . '/inc/setup/class-page-installer.php';
 
 
@@ -405,6 +428,9 @@ add_action(
         'trade_sphare_real_estate_customizer_controls_assets'
 );
 
+
+/**
+ * Load theme Customizer settings.
+ */
 require_once get_template_directory() . '/inc/customizer/class-customizer.php';
 
-require_once get_template_directory() . '/inc/setup/class-page-installer.php';

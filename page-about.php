@@ -6,276 +6,342 @@
  */
 
 get_header();
+
+$page_title     = get_the_title();
+$page_content   = get_the_content();
+$featured_image = get_the_post_thumbnail_url( get_the_ID(), 'large' );
 ?>
 
 <main>
 
-<section class="page-hero">
-<div class="container">
+        <!-- About Hero -->
+        <section class="page-hero">
+                <div class="container">
 
-<div class="page-hero-content">
+                        <div class="page-hero-content">
 
-<span class="section-eyebrow">
-من نحن
-</span>
+                                <span class="section-eyebrow">
+                                        About Us
+                                </span>
 
-<h1>
-نبني قيمة عقارية
-تتجاوز حدود المشروع
-</h1>
+                                <h1>
+                                        <?php echo esc_html( $page_title ); ?>
+                                </h1>
 
-<p>
-نعمل على تطوير مشاريع عقارية تجمع بين
-جودة التصميم وكفاءة التنفيذ وفهم احتياجات
-السوق لبناء قيمة مستدامة للمستثمرين والمجتمعات.
-</p>
+                                <?php if ( $page_content ) : ?>
 
-</div>
+                                        <div class="page-hero-description">
+                                                <?php
+                                                echo wp_kses_post(
+                                                        wpautop( $page_content )
+                                                );
+                                                ?>
+                                        </div>
 
-</div>
-</section>
+                                <?php else : ?>
 
+                                        <p>
+                                                We develop real estate opportunities
+                                                that combine thoughtful design,
+                                                efficient execution, and a clear
+                                                understanding of market needs.
+                                        </p>
 
-<section class="section">
-<div class="container">
+                                <?php endif; ?>
 
-<div class="property-detail-grid">
+                        </div>
 
-<div class="property-detail-media">
+                </div>
+        </section>
 
-<div class="media-placeholder">
-التطوير العقاري
-</div>
 
-</div>
+        <!-- Vision -->
+        <section class="section">
+                <div class="container">
 
-<div class="property-detail-content">
+                        <div class="property-detail-grid">
 
-<span class="section-eyebrow">
-رؤيتنا
-</span>
+                                <div class="property-detail-media">
 
-<h2>
-تطوير عقاري قائم على
-الجودة والقيمة طويلة الأجل
-</h2>
+                                        <?php if ( $featured_image ) : ?>
 
-<p>
-نؤمن بأن التطوير العقاري الناجح لا يبدأ
-من البناء فقط بل من فهم الموقع والسوق
-واحتياجات المستخدم النهائي.
-</p>
+                                                <img
+                                                        src="<?php echo esc_url( $featured_image ); ?>"
+                                                        alt="<?php echo esc_attr( $page_title ); ?>"
+                                                        loading="lazy"
+                                                >
 
-<p>
-لذلك نركز على بناء مشاريع ذات هوية واضحة
-وتخطيط مدروس وجودة تنفيذ وتجربة استخدام
-تضيف قيمة حقيقية إلى المكان والمجتمع.
-</p>
+                                        <?php else : ?>
 
-</div>
+                                                <div class="media-placeholder">
+                                                        Real Estate Development
+                                                </div>
 
-</div>
+                                        <?php endif; ?>
 
-</div>
-</section>
+                                </div>
 
 
-<section class="section section-alt">
-<div class="container">
+                                <div class="property-detail-content">
 
-<div class="section-heading">
+                                        <span class="section-eyebrow">
+                                                Our Vision
+                                        </span>
 
-<span class="section-eyebrow">
-ما نؤمن به
-</span>
+                                        <h2>
+                                                Real estate development built
+                                                around quality and long-term value
+                                        </h2>
 
-<h2>
-مبادئ تقود قراراتنا
-</h2>
+                                        <p>
+                                                Successful real estate development
+                                                starts with understanding the
+                                                location, the market, and the needs
+                                                of the end user.
+                                        </p>
 
-<p>
-نضع مجموعة من المبادئ الأساسية في صميم
-كل مشروع وقرار استثماري.
-</p>
+                                        <p>
+                                                We focus on creating projects with
+                                                a clear identity, thoughtful planning,
+                                                strong execution, and experiences
+                                                that add meaningful value to places
+                                                and communities.
+                                        </p>
 
-</div>
+                                </div>
 
+                        </div>
 
-<div class="cards-grid">
+                </div>
+        </section>
 
-<article class="service-card">
-<span class="service-detail-number">01</span>
 
-<h3>
-الجودة
-</h3>
+        <!-- Principles -->
+        <section class="section section-alt">
+                <div class="container">
 
-<p>
-نركز على التفاصيل وجودة التنفيذ
-لضمان مشاريع موثوقة وقابلة للاستمرار.
-</p>
-</article>
+                        <div class="section-heading">
 
+                                <span class="section-eyebrow">
+                                        What We Believe
+                                </span>
 
-<article class="service-card">
-<span class="service-detail-number">02</span>
+                                <h2>
+                                        Principles that guide our decisions
+                                </h2>
 
-<h3>
-القيمة
-</h3>
+                                <p>
+                                        We place a clear set of principles at the
+                                        heart of every project and investment decision.
+                                </p>
 
-<p>
-نبحث عن فرص التطوير التي تحقق قيمة
-حقيقية للمستثمر والمستخدم والسوق.
-</p>
-</article>
+                        </div>
 
 
-<article class="service-card">
-<span class="service-detail-number">03</span>
+                        <div class="cards-grid">
 
-<h3>
-الاستدامة
-</h3>
+                                <article class="service-card">
 
-<p>
-نخطط للمشاريع بمنظور طويل الأجل
-يوازن بين العائد والجودة واستدامة القيمة.
-</p>
-</article>
+                                        <span class="service-detail-number">
+                                                01
+                                        </span>
 
+                                        <h3>
+                                                Quality
+                                        </h3>
 
-<article class="service-card">
-<span class="service-detail-number">04</span>
+                                        <p>
+                                                We focus on detail and execution
+                                                quality to create reliable projects
+                                                built for the long term.
+                                        </p>
 
-<h3>
-الشفافية
-</h3>
+                                </article>
 
-<p>
-نحرص على وضوح المعلومات والتواصل
-الفعال في مختلف مراحل المشروع.
-</p>
-</article>
 
-</div>
+                                <article class="service-card">
 
-</div>
-</section>
+                                        <span class="service-detail-number">
+                                                02
+                                        </span>
 
+                                        <h3>
+                                                Value
+                                        </h3>
 
-<section class="section">
-<div class="container">
+                                        <p>
+                                                We identify development opportunities
+                                                that create meaningful value for
+                                                investors, users, and the market.
+                                        </p>
 
-<div class="section-heading">
+                                </article>
 
-<span class="section-eyebrow">
-خبراتنا
-</span>
 
-<h2>
-منظومة متكاملة للتطوير العقاري
-</h2>
+                                <article class="service-card">
 
-</div>
+                                        <span class="service-detail-number">
+                                                03
+                                        </span>
 
+                                        <h3>
+                                                Sustainability
+                                        </h3>
 
-<div class="cards-grid">
+                                        <p>
+                                                We approach projects with a long-term
+                                                perspective that balances returns,
+                                                quality, and lasting value.
+                                        </p>
 
-<article class="service-card">
+                                </article>
 
-<h3>
-دراسة وتقييم الفرص
-</h3>
 
-<p>
-تحليل المواقع والفرص الاستثمارية
-ودراسة الجدوى قبل اتخاذ قرارات التطوير.
-</p>
+                                <article class="service-card">
 
-</article>
+                                        <span class="service-detail-number">
+                                                04
+                                        </span>
 
+                                        <h3>
+                                                Transparency
+                                        </h3>
 
-<article class="service-card">
+                                        <p>
+                                                We prioritize clear information and
+                                                effective communication throughout
+                                                every stage of a project.
+                                        </p>
 
-<h3>
-تطوير المشاريع
-</h3>
+                                </article>
 
-<p>
-تحويل الأفكار والمخططات إلى مشاريع
-عقارية متكاملة ذات هوية واضحة.
-</p>
+                        </div>
 
-</article>
+                </div>
+        </section>
 
 
-<article class="service-card">
+        <!-- Expertise -->
+        <section class="section">
+                <div class="container">
 
-<h3>
-إدارة القيمة
-</h3>
+                        <div class="section-heading">
 
-<p>
-التركيز على تحقيق أفضل قيمة ممكنة
-عبر مختلف مراحل دورة حياة المشروع.
-</p>
+                                <span class="section-eyebrow">
+                                        Our Expertise
+                                </span>
 
-</article>
+                                <h2>
+                                        An integrated approach to real estate development
+                                </h2>
 
-</div>
+                        </div>
 
-</div>
-</section>
 
+                        <div class="cards-grid">
 
-<section class="section">
-<div class="container">
+                                <article class="service-card">
 
-<div class="cta">
+                                        <h3>
+                                                Opportunity Assessment
+                                        </h3>
 
-<div>
+                                        <p>
+                                                We analyze locations, investment
+                                                opportunities, and feasibility before
+                                                development decisions are made.
+                                        </p>
 
-<span class="section-eyebrow">
-لنبدأ
-</span>
+                                </article>
 
-<h2>
-لديك فرصة أو مشروع عقاري
-</h2>
 
-<p>
-تحدث معنا لمناقشة الفكرة ودراسة
-إمكانية تحويلها إلى مشروع قابل للنمو.
-</p>
+                                <article class="service-card">
 
-</div>
+                                        <h3>
+                                                Project Development
+                                        </h3>
 
-<div class="hero-actions">
+                                        <p>
+                                                We transform ideas and plans into
+                                                integrated real estate projects
+                                                with a clear identity.
+                                        </p>
 
-<a
-href="<?php echo esc_url( home_url( '/contact/' ) ); ?>"
-class="button button-primary"
->
-تواصل معنا
-</a>
+                                </article>
 
-<a
-href="<?php echo esc_url( home_url( '/projects/' ) ); ?>"
-class="button button-secondary"
->
-استكشف مشاريعنا
-</a>
 
-</div>
+                                <article class="service-card">
 
-</div>
+                                        <h3>
+                                                Value Management
+                                        </h3>
 
-</div>
-</section>
+                                        <p>
+                                                We focus on creating the strongest
+                                                possible value throughout the
+                                                project's lifecycle.
+                                        </p>
+
+                                </article>
+
+                        </div>
+
+                </div>
+        </section>
+
+
+        <!-- CTA -->
+        <section class="section">
+                <div class="container">
+
+                        <div class="cta">
+
+                                <div>
+
+                                        <span class="section-eyebrow">
+                                                Let's Talk
+                                        </span>
+
+                                        <h2>
+                                                Have a real estate opportunity
+                                                or project?
+                                        </h2>
+
+                                        <p>
+                                                Talk to us about your idea and explore
+                                                how it could become a scalable
+                                                development opportunity.
+                                        </p>
+
+                                </div>
+
+
+                                <div class="hero-actions">
+
+                                        <a
+                                                href="<?php echo esc_url( home_url( '/contact/' ) ); ?>"
+                                                class="button button-primary"
+                                        >
+                                                Contact Us
+                                        </a>
+
+                                        <a
+                                                href="<?php echo esc_url( home_url( '/projects/' ) ); ?>"
+                                                class="button button-secondary"
+                                        >
+                                                Explore Our Projects
+                                        </a>
+
+                                </div>
+
+                        </div>
+
+                </div>
+        </section>
 
 </main>
 
 <?php
 get_footer();
 ?>
+

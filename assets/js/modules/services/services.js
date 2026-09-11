@@ -27,7 +27,7 @@
 
             container.innerHTML = `
                 <p class="data-error">
-                    تعذر تحميل الخدمات حاليا.
+                    Unable to load services right now.
                 </p>
             `;
         }
@@ -69,7 +69,7 @@
                         href="${serviceDetailUrl}?id=${service.id}"
                         class="service-card-link"
                     >
-                        تعرف على الخدمة
+                        Learn More
                         <span aria-hidden="true">←</span>
                     </a>
 

@@ -1,9 +1,9 @@
 <?php
 /**
- * Service detail page template.
- *
- * @package Trade_Sphare_Real_Estate
- */
+* Service detail page template. 
+*
+* @package Trade_Sphare_Real_Estate
+*/
 
 get_header();
 ?>
@@ -28,18 +28,18 @@ hidden
 >
 
 <h1>
-الخدمة غير موجودة
+Service Not Found
 </h1>
 
 <p>
-عذرا لم نتمكن من العثور على الخدمة المطلوبة.
+Sorry, we could not find the requested service.
 </p>
 
 <a
 href="<?php echo esc_url( home_url( '/services/' ) ); ?>"
 class="btn btn-primary"
 >
-العودة إلى الخدمات
+Back to Services
 </a>
 
 </div>

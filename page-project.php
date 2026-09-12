@@ -28,18 +28,18 @@ hidden
 >
 
 <h1>
-المشروع غير موجود
+Project Not Found
 </h1>
 
 <p>
-عذرا لم نتمكن من العثور على المشروع المطلوب.
+Sorry, we could not find the requested project.
 </p>
 
 <a
 href="<?php echo esc_url( home_url( '/projects/' ) ); ?>"
 class="btn btn-primary"
 >
-العودة إلى المشاريع
+Back to Projects
 </a>
 
 </div>
@@ -53,3 +53,4 @@ class="btn btn-primary"
 <?php
 get_footer();
 ?>
+

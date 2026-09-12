@@ -1,9 +1,9 @@
 <?php
 /**
- * Projects page template.
- *
- * @package Trade_Sphare_Real_Estate
- */
+* Projects page template. 
+*
+* @package Trade_Sphare_Real_Estate
+*/
 
 get_header();
 ?>
@@ -17,16 +17,16 @@ get_header();
 <div class="page-hero-content">
 
 <span class="section-eyebrow">
-مشاريع التطوير العقاري
+Real Estate Development Projects
 </span>
 
 <h1>
-مشاريع نبني بها قيمة مستدامة
+Projects Building Sustainable Value
 </h1>
 
 <p>
-استكشف مجموعة من المشاريع العقارية
-السكنية والتجارية ومتعددة الاستخدامات.
+Explore a range of real estate projects:
+residential, commercial, and mixed-use.
 </p>
 
 </div>
@@ -48,11 +48,11 @@ aria-labelledby="projects-title"
 <div>
 
 <span class="section-eyebrow">
-محفظة المشاريع
+Project Portfolio
 </span>
 
 <h2 id="projects-title">
-المشاريع الحالية والقادمة
+Current and Upcoming Projects
 </h2>
 
 </div>
@@ -62,7 +62,7 @@ id="projects-count"
 class="properties-count"
 aria-live="polite"
 >
-جاري تحميل المشاريع...
+Loading projects...
 </p>
 
 </div>
@@ -76,13 +76,13 @@ class="property-filters"
 <div class="property-filter-field">
 
 <label for="project-search">
-البحث
+Search
 </label>
 
 <input
 type="search"
 id="project-search"
-placeholder="ابحث باسم المشروع أو الموقع..."
+placeholder="Search by project name or location..."
 autocomplete="off"
 >
 
@@ -92,13 +92,13 @@ autocomplete="off"
 <div class="property-filter-field">
 
 <label for="project-category">
-التصنيف
+Category
 </label>
 
 <select id="project-category">
 
 <option value="">
-جميع التصنيفات
+All Categories
 </option>
 
 </select>
@@ -109,13 +109,13 @@ autocomplete="off"
 <div class="property-filter-field">
 
 <label for="project-status">
-الحالة
+Status
 </label>
 
 <select id="project-status">
 
 <option value="">
-جميع الحالات
+All Statuses
 </option>
 
 </select>
@@ -126,13 +126,13 @@ autocomplete="off"
 <div class="property-filter-field">
 
 <label for="project-location">
-الموقع
+Location
 </label>
 
 <select id="project-location">
 
 <option value="">
-جميع المواقع
+All Locations
 </option>
 
 </select>
@@ -146,7 +146,7 @@ autocomplete="off"
 type="submit"
 class="btn btn-primary"
 >
-تطبيق البحث
+Apply Search
 </button>
 
 <button
@@ -154,7 +154,7 @@ type="button"
 id="project-reset"
 class="btn btn-secondary"
 >
-إعادة التعيين
+Reset Assign
 </button>
 
 </div>
@@ -176,11 +176,11 @@ hidden
 >
 
 <h3>
-لم يتم العثور على مشاريع
+No projects found
 </h3>
 
 <p>
-جرب تغيير كلمات البحث أو خيارات التصفية.
+Try changing your search terms or filter options.
 </p>
 
 <button
@@ -188,7 +188,7 @@ type="button"
 id="project-empty-reset"
 class="btn btn-secondary"
 >
-عرض جميع المشاريع
+View all projects
 </button>
 
 </div>
@@ -199,7 +199,7 @@ id="projects-error"
 class="data-error"
 hidden
 >
-تعذر تحميل المشاريع حاليا.
+Unable to load projects at this time.
 </div>
 
 </div>

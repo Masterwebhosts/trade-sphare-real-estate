@@ -143,7 +143,7 @@ const ProjectsFilter = {
                     .filter(Boolean)
             )
         ].sort((a, b) =>
-            a.localeCompare(b, "ar")
+            a.localeCompare(b, "en")
         );
     },
 
@@ -319,7 +319,7 @@ const ProjectsFilter = {
 
 
         this.elements.count.textContent =
-            `${count} ${count === 1 ? "مشروع" : "مشاريع"}`;
+            `${count} ${count === 1 ? "Project" : "Projects"}`;
 
 
         const isEmpty =

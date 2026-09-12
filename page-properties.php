@@ -1,9 +1,9 @@
 <?php
 /**
- * Properties page template.
- *
- * @package Trade_Sphare_Real_Estate
- */
+* Properties page template. 
+*
+* @package Trade_Sphare_Real_Estate
+*/
 
 get_header();
 ?>
@@ -19,16 +19,16 @@ get_header();
 <div class="page-hero-content">
 
 <span class="section-eyebrow">
-العقارات
+Properties
 </span>
 
 <h1>
-اكتشف العقار المناسب لك
+Discover the Right Property for You
 </h1>
 
 <p>
-مجموعة من العقارات المختارة للبيع والاستثمار
-في مواقع مميزة وبخيارات متنوعة.
+A curated selection of properties for sale and investment,
+featuring prime locations and diverse options.
 </p>
 
 </div>
@@ -52,11 +52,11 @@ aria-labelledby="properties-title"
 <div>
 
 <span class="section-eyebrow">
-قائمة العقارات
+Property List
 </span>
 
 <h2 id="properties-title">
-العقارات المتاحة
+Available Properties
 </h2>
 
 </div>
@@ -66,7 +66,7 @@ id="properties-count"
 class="properties-count"
 aria-live="polite"
 >
-جاري تحميل العقارات...
+Loading properties...
 </p>
 
 </div>
@@ -82,14 +82,14 @@ class="property-filters"
 <div class="property-filter-field">
 
 <label for="property-search">
-البحث
+Search
 </label>
 
 <input
 type="search"
 id="property-search"
 name="search"
-placeholder="ابحث باسم العقار أو الموقع..."
+placeholder="Search by property name or location..."
 autocomplete="off"
 >
 
@@ -99,7 +99,7 @@ autocomplete="off"
 <div class="property-filter-field">
 
 <label for="property-type">
-نوع العقار
+Property Type
 </label>
 
 <select
@@ -108,7 +108,7 @@ name="type"
 >
 
 <option value="">
-جميع الأنواع
+All Types
 </option>
 
 </select>
@@ -119,7 +119,7 @@ name="type"
 <div class="property-filter-field">
 
 <label for="property-status">
-الحالة
+Status
 </label>
 
 <select
@@ -128,7 +128,7 @@ name="status"
 >
 
 <option value="">
-جميع الحالات
+All Statuses
 </option>
 
 </select>
@@ -139,7 +139,7 @@ name="status"
 <div class="property-filter-field">
 
 <label for="property-location">
-الموقع
+Location
 </label>
 
 <select
@@ -148,7 +148,7 @@ name="location"
 >
 
 <option value="">
-جميع المواقع
+All Locations
 </option>
 
 </select>
@@ -162,7 +162,7 @@ name="location"
 type="submit"
 class="btn btn-primary"
 >
-تطبيق البحث
+Apply Search
 </button>
 
 <button
@@ -170,7 +170,7 @@ type="button"
 id="property-reset"
 class="btn btn-secondary"
 >
-إعادة التعيين
+Reset
 </button>
 
 </div>
@@ -196,11 +196,11 @@ hidden
 >
 
 <h3>
-لم يتم العثور على عقارات
+No properties found
 </h3>
 
 <p>
-جرب تغيير كلمات البحث أو خيارات التصفية.
+Try changing your search terms or filter options.
 </p>
 
 <button
@@ -208,7 +208,7 @@ type="button"
 id="property-empty-reset"
 class="btn btn-secondary"
 >
-عرض جميع العقارات
+View all properties
 </button>
 
 </div>
@@ -221,7 +221,7 @@ id="properties-error"
 class="data-error"
 hidden
 >
-تعذر تحميل العقارات حاليا.
+Unable to load properties at this time.
 </div>
 
 </div>

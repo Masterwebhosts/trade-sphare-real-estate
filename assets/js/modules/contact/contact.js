@@ -54,7 +54,7 @@ const ContactModule = {
             this.showErrors(errors);
 
             this.setStatus(
-                "يرجى مراجعة الحقول المطلوبة وتصحيح الأخطاء.",
+                "Please review the required fields and correct the errors.",
                 "error"
             );
 
@@ -74,35 +74,35 @@ const ContactModule = {
         if (data.name.length < 2) {
 
             errors.name =
-                "يرجى إدخال الاسم بشكل صحيح.";
+                "Please enter a valid name.";
         }
 
 
         if (!this.isValidEmail(data.email)) {
 
             errors.email =
-                "يرجى إدخال بريد إلكتروني صحيح.";
+                "Please enter a valid email address.";
         }
 
 
         if (data.phone && data.phone.length < 7) {
 
             errors.phone =
-                "يرجى إدخال رقم هاتف صحيح.";
+                "Please enter a valid phone number.";
         }
 
 
         if (!data.type) {
 
             errors.type =
-                "يرجى اختيار نوع الاستفسار.";
+                "Please select an inquiry type.";
         }
 
 
         if (data.message.length < 10) {
 
             errors.message =
-                "يرجى كتابة رسالة تحتوي على 10 أحرف على الأقل.";
+                "Please enter a message containing at least 10 characters.";
         }
 
 
@@ -216,7 +216,7 @@ const ContactModule = {
 
 
         this.setStatus(
-            "تم التحقق من بيانات النموذج بنجاح. سيتم ربط الإرسال الفعلي لاحقا.",
+            "Your form data has been successfully validated. The actual submission will be connected later.",
             "success"
         );
     },

@@ -142,6 +142,18 @@ function trade_sphare_real_estate_enqueue_assets() {
                 )
         );
 
+                /*
+         * Shared site components.
+         */
+
+        wp_enqueue_script(
+                'trade-sphare-real-estate-components',
+                $theme_uri . '/assets/js/components/site-components.js',
+                array( 'trade-sphare-real-estate-data' ),
+                $theme_version,
+                true
+        );
+
 
         /*
          * =========================

@@ -72,11 +72,11 @@ const PropertyDetailModule = {
 
             <nav
                 class="property-breadcrumbs"
-                aria-label="مسار التنقل"
+                aria-label="Breadcrumb navigation"
             >
 
                 <a href="index.html">
-                    الرئيسية
+                    Home
                 </a>
 
                 <span aria-hidden="true">
@@ -84,7 +84,7 @@ const PropertyDetailModule = {
                 </span>
 
                 <a href="properties.html">
-                    العقارات
+                    Properties
                 </a>
 
                 <span aria-hidden="true">
@@ -142,11 +142,11 @@ const PropertyDetailModule = {
                     <div class="property-detail-price">
 
                         <span>
-                            السعر
+                            Price
                         </span>
 
                         <strong>
-                            ${property.price.toLocaleString("ar-SA")}
+                            ${property.price.toLocaleString("en-US")}
                             ${property.currency}
                         </strong>
 
@@ -161,7 +161,7 @@ const PropertyDetailModule = {
                             </strong>
 
                             <span>
-                                غرف نوم
+                                Bedrooms
                             </span>
                         </div>
 
@@ -172,7 +172,7 @@ const PropertyDetailModule = {
                             </strong>
 
                             <span>
-                                حمامات
+                                Bathrooms
                             </span>
                         </div>
 
@@ -183,7 +183,7 @@ const PropertyDetailModule = {
                             </strong>
 
                             <span>
-                                م²
+                                m²
                             </span>
                         </div>
 
@@ -193,7 +193,7 @@ const PropertyDetailModule = {
                     <div class="property-detail-description">
 
                         <h2>
-                            نبذة عن العقار
+                            About the Property
                         </h2>
 
                         <p>
@@ -209,14 +209,14 @@ const PropertyDetailModule = {
                             href="contact.html"
                             class="btn btn-primary"
                         >
-                            اطلب معلومات عن العقار
+                            Request Property Information
                         </a>
 
                         <a
                             href="properties.html"
                             class="btn btn-secondary"
                         >
-                            العودة إلى العقارات
+                            Back to Properties
                         </a>
 
                     </div>
@@ -232,13 +232,13 @@ const PropertyDetailModule = {
     description(property) {
 
         return `
-            ${property.title} هو عقار ${property.type}
-            ${property.condition ? `بحالة ${property.condition}` : ""}
-            يقع في ${property.location}.
-            تبلغ مساحته ${property.area} م²
-            ويضم ${property.bedrooms} غرف نوم
-            و${property.bathrooms} حمامات.
-            العقار متاح حاليا بحالة:
+            ${property.title} is a ${property.type}
+            ${property.condition ? `in ${property.condition} condition` : ""}
+            located in ${property.location}.
+            It has an area of ${property.area} m²
+            and includes ${property.bedrooms} bedrooms
+            and ${property.bathrooms} bathrooms.
+            The property is currently available with the status:
             ${property.status}.
         `;
     },
@@ -247,10 +247,10 @@ const PropertyDetailModule = {
     updateMeta(property) {
 
         document.title =
-            `${property.title} | قالب التطوير العقاري`;
+            `${property.title} | Real Estate Development`;
 
         const description =
-            `تفاصيل ${property.title} في ${property.location} بمساحة ${property.area} م² و${property.bedrooms} غرف نوم.`;
+            `Details of ${property.title} in ${property.location}, with an area of ${property.area} m² and ${property.bedrooms} bedrooms.`;
 
         const meta =
             document.querySelector(

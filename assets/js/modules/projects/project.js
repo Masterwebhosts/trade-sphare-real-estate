@@ -87,11 +87,11 @@ const ProjectDetailModule = {
 
             <nav
                 class="property-breadcrumbs"
-                aria-label="مسار التنقل"
+                aria-label="Breadcrumb navigation"
             >
 
                 <a href="index.html">
-                    الرئيسية
+                    Home
                 </a>
 
                 <span aria-hidden="true">
@@ -99,7 +99,7 @@ const ProjectDetailModule = {
                 </span>
 
                 <a href="projects.html">
-                    المشاريع
+                    Projects
                 </a>
 
                 <span aria-hidden="true">
@@ -157,7 +157,7 @@ const ProjectDetailModule = {
                     <div class="property-detail-description">
 
                         <h2>
-                            عن المشروع
+                            About the Project
                         </h2>
 
                         <p>
@@ -171,7 +171,7 @@ const ProjectDetailModule = {
 
                         <div>
                             <span>
-                                التصنيف
+                                Category
                             </span>
 
                             <strong>
@@ -182,7 +182,7 @@ const ProjectDetailModule = {
 
                         <div>
                             <span>
-                                الحالة
+                                Status
                             </span>
 
                             <strong>
@@ -193,7 +193,7 @@ const ProjectDetailModule = {
 
                         <div>
                             <span>
-                                الموقع
+                                Location
                             </span>
 
                             <strong>
@@ -210,14 +210,14 @@ const ProjectDetailModule = {
                             href="contact.html"
                             class="btn btn-primary"
                         >
-                            استفسر عن المشروع
+                            Inquire About This Project
                         </a>
 
                         <a
                             href="projects.html"
                             class="btn btn-secondary"
                         >
-                            العودة إلى المشاريع
+                            Back to Projects
                         </a>
 
                     </div>
@@ -233,7 +233,7 @@ const ProjectDetailModule = {
     updateMeta(project) {
 
         document.title =
-            `${project.title} | قالب التطوير العقاري`;
+            `${project.title} | Real Estate Development`;
 
 
         const description =

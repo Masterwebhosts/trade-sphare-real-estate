@@ -104,7 +104,7 @@ const PropertiesFilter = {
                     .filter(Boolean)
             )
         ].sort((a, b) =>
-            a.localeCompare(b, "ar")
+            a.localeCompare(b, "en")
         );
     },
 
@@ -248,7 +248,7 @@ const PropertiesFilter = {
             this.filteredItems.length;
 
         this.elements.count.textContent =
-            `${count} ${count === 1 ? "عقار" : "عقارات"}`;
+            `${count} ${count === 1 ? "Property" : "Properties"}`;
 
         const isEmpty = count === 0;
 

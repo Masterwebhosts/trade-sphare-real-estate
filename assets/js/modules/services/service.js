@@ -87,11 +87,11 @@ const ServiceDetailModule = {
 
             <nav
                 class="property-breadcrumbs"
-                aria-label="مسار التنقل"
+                aria-label="Breadcrumb navigation"
             >
 
                 <a href="index.html">
-                    الرئيسية
+                    Home
                 </a>
 
                 <span aria-hidden="true">
@@ -99,7 +99,7 @@ const ServiceDetailModule = {
                 </span>
 
                 <a href="services.html">
-                    الخدمات
+                    Services
                 </a>
 
                 <span aria-hidden="true">
@@ -140,15 +140,16 @@ const ServiceDetailModule = {
                     <div class="service-detail-description">
 
                         <h2>
-                            عن الخدمة
+                            About the Service
                         </h2>
 
                         <p>
-                            نقدم من خلال هذه الخدمة حلولا
-                            عقارية متخصصة مصممة وفق احتياجات
-                            المشروع والمستثمر مع التركيز على
-                            الجودة ودراسة الفرص وتحقيق قيمة
-                            مستدامة على المدى الطويل.
+                            Through this service, we provide
+                            specialized real estate solutions
+                            designed around the needs of each
+                            project and investor, with a focus
+                            on quality, opportunity analysis,
+                            and long-term sustainable value.
                         </p>
 
                     </div>
@@ -162,7 +163,7 @@ const ServiceDetailModule = {
                             </strong>
 
                             <span>
-                                خدمة متخصصة
+                                Specialized Service
                             </span>
                         </div>
 
@@ -173,18 +174,18 @@ const ServiceDetailModule = {
                             </strong>
 
                             <span>
-                                مجال الخدمة
+                                Service Area
                             </span>
                         </div>
 
 
                         <div>
                             <strong>
-                                احترافي
+                                Professional
                             </strong>
 
                             <span>
-                                نهج العمل
+                                Our Approach
                             </span>
                         </div>
 
@@ -197,14 +198,14 @@ const ServiceDetailModule = {
                             href="contact.html"
                             class="btn btn-primary"
                         >
-                            اطلب هذه الخدمة
+                            Request This Service
                         </a>
 
                         <a
                             href="services.html"
                             class="btn btn-secondary"
                         >
-                            العودة إلى الخدمات
+                            Back to Services
                         </a>
 
                     </div>
@@ -220,7 +221,7 @@ const ServiceDetailModule = {
     updateMeta(service) {
 
         document.title =
-            `${service.title} | قالب التطوير العقاري`;
+            `${service.title} | Real Estate Development`;
 
 
         const meta =

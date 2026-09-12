@@ -1,9 +1,9 @@
 <?php
 /**
- * Services page template.
- *
- * @package Trade_Sphare_Real_Estate
- */
+* Services page template. 
+*
+* @package Trade_Sphare_Real_Estate
+*/
 
 get_header();
 ?>
@@ -17,17 +17,17 @@ get_header();
 <div class="page-hero-content">
 
 <span class="section-eyebrow">
-خدماتنا
+Our Services
 </span>
 
 <h1>
-حلول عقارية من الفكرة إلى القيمة
+Real Estate Solutions: From Concept to Value
 </h1>
 
 <p>
-خدمات متخصصة تساعد المطورين والمستثمرين
-وأصحاب المشاريع على اتخاذ قرارات أفضل
-وتحقيق قيمة مستدامة.
+Specialized services helping developers, investors,
+and project owners make better decisions
+and achieve sustainable value.
 </p>
 
 </div>
@@ -49,11 +49,11 @@ aria-labelledby="services-title"
 <div>
 
 <span class="section-eyebrow">
-خدمات التطوير العقاري
+Real Estate Development Services
 </span>
 
 <h2 id="services-title">
-ماذا نقدم
+What We Offer
 </h2>
 
 </div>
@@ -73,7 +73,7 @@ id="services-error"
 class="data-error"
 hidden
 >
-تعذر تحميل الخدمات حاليا.
+Unable to load services at this time.
 </div>
 
 </div>

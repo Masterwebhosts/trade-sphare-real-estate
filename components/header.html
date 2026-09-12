@@ -2,44 +2,48 @@
 
     <div class="container">
 
-        <nav class="site-nav">
+        <nav class="site-nav" aria-label="Primary navigation">
 
-            <a
-                href="index.html"
-                class="site-logo"
-                aria-label="الصفحة الرئيسية"
-            >
-                التطوير العقاري
+            <a href="index.html" class="site-logo" aria-label="Home page">
+                Real Estate Development
             </a>
 
-            <div
-                class="site-menu"
-                aria-label="القائمة الرئيسية"
-            >
+            <button class="site-menu-toggle" type="button" aria-expanded="false" aria-controls="primary-menu"
+                aria-label="Open navigation menu">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </button>
 
-                <a href="index.html">
-                    الرئيسية
-                </a>
+            <div class="site-menu-wrapper" id="primary-menu">
 
-                <a href="properties.html">
-                    العقارات
-                </a>
+                <div class="site-menu" aria-label="Main navigation">
 
-                <a href="projects.html">
-                    المشاريع
-                </a>
+                    <a href="index.html">
+                        Home
+                    </a>
 
-                <a href="services.html">
-                    الخدمات
-                </a>
+                    <a href="properties.html">
+                        Properties
+                    </a>
 
-                <a href="about.html">
-                    من نحن
-                </a>
+                    <a href="projects.html">
+                        Projects
+                    </a>
 
-                <a href="contact.html">
-                    تواصل معنا
-                </a>
+                    <a href="services.html">
+                        Services
+                    </a>
+
+                    <a href="about.html">
+                        About Us
+                    </a>
+
+                    <a href="contact.html">
+                        Contact Us
+                    </a>
+
+                </div>
 
             </div>
 

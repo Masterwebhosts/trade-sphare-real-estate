@@ -67,8 +67,8 @@ $header_animation_speed = absint(
 );
 
 $header_animation_direction = get_theme_mod(
-		'trade_sphare_real_estate_header_animation_direction',
-		'left-right'
+	'trade_sphare_real_estate_header_animation_direction',
+	'left-right'
 );
 
 $header_sticky = get_theme_mod(
@@ -165,7 +165,7 @@ if ( ! in_array( $header_animation_direction, $allowed_animation_directions, tru
 
 /*
  * =========================================================
- * Convert HEX → RGB
+ * Convert HEX to RGB
  * =========================================================
  */
 
@@ -221,6 +221,7 @@ $secondary_rgb = array(
 
 $header_opacity = $header_background_opacity / 100;
 
+
 /*
  * =========================================================
  * Header Background RGB
@@ -239,6 +240,7 @@ if ( 3 === strlen( $header_hex ) ) {
 $header_rgb_r = hexdec( substr( $header_hex, 0, 2 ) );
 $header_rgb_g = hexdec( substr( $header_hex, 2, 2 ) );
 $header_rgb_b = hexdec( substr( $header_hex, 4, 2 ) );
+
 
 /*
  * =========================================================
@@ -286,7 +288,9 @@ $secondary_luminance = $calculate_luminance(
 
 
 /*
- * Default menu colors.
+ * =========================================================
+ * Default Menu Colors
+ * =========================================================
  */
 
 if ( $primary_luminance > 0.55 ) {
@@ -302,8 +306,9 @@ if ( $primary_luminance > 0.55 ) {
 
 
 /*
- * Gradient / Animated backgrounds:
- * choose a readable color based on the darker side.
+ * =========================================================
+ * Gradient / Animated Backgrounds
+ * =========================================================
  */
 
 if (
@@ -330,7 +335,9 @@ if (
 
 
 /*
- * Transparent header.
+ * =========================================================
+ * Transparent Header
+ * =========================================================
  */
 
 if ( 'transparent' === $header_background_style ) {
@@ -452,16 +459,37 @@ $header_style = sprintf(
 
 			<?php if ( $header_menu ) : ?>
 
-				<?php
-				wp_nav_menu(
-					array(
-						'theme_location' => 'primary',
-						'container'      => false,
-						'menu_class'     => 'site-menu',
-						'fallback_cb'    => false,
-					)
-				);
-				?>
+				<button
+					class="site-menu-toggle"
+					type="button"
+					aria-expanded="false"
+					aria-controls="primary-menu"
+					aria-label="<?php esc_attr_e( 'Open navigation menu', 'trade-sphare-real-estate-development' ); ?>"
+				>
+					<span aria-hidden="true"></span>
+					<span aria-hidden="true"></span>
+					<span aria-hidden="true"></span>
+				</button>
+
+
+				<div
+					class="site-menu-wrapper"
+					id="primary-menu"
+				>
+
+					<?php
+					wp_nav_menu(
+						array(
+							'theme_location' => 'primary',
+							'container'      => false,
+							'menu_class'     => 'site-menu',
+							'menu_id'        => 'primary-menu-list',
+							'fallback_cb'    => false,
+						)
+					);
+					?>
+
+				</div>
 
 			<?php endif; ?>
 
@@ -471,3 +499,4 @@ $header_style = sprintf(
 	</div>
 
 </header>
+

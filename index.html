@@ -1,14 +1,16 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en" dir="ltr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description" content="قالب التطوير العقاري — منصة احترافية لعرض العقارات والمشاريع والخدمات العقارية.">
+    <meta name="description"
+        content="Professional real estate development theme — a platform for showcasing properties, projects, and real estate services.">
 
     <meta name="theme-color" content="#1f4d3a">
 
-    <title>قالب التطوير العقاري</title>
+    <title>Real Estate Development Theme</title>
 
     <link rel="stylesheet" href="assets/css/main.css">
 </head>
@@ -16,27 +18,60 @@
 <body>
 
     <header class="site-header">
-        <div class="container">
-            <nav class="site-nav" aria-label="التنقل الرئيسي">
 
-                <a href="index.html" class="site-logo">
-                    قالب التطوير العقاري
+        <div class="container">
+
+            <nav class="site-nav" aria-label="Main navigation">
+
+                <a href="index.html" class="site-logo" aria-label="Home page">
+                    Real Estate Development Theme
                 </a>
 
-                <div class="site-menu">
-                    <a href="index.html">الرئيسية</a>
-                    <a href="properties.html">العقارات</a>
-                    <a href="projects.html">المشاريع</a>
-                    <a href="services.html">الخدمات</a>
-                    <a href="about.html">من نحن</a>
-                    <a href="contact.html">اتصل بنا</a>
+                <button class="site-menu-toggle" type="button" aria-expanded="false" aria-controls="primary-menu"
+                    aria-label="Open navigation menu">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </button>
+
+                <div class="site-menu-wrapper" id="primary-menu">
+
+                    <div class="site-menu" aria-label="Main navigation">
+
+                        <a href="index.html">
+                            Home
+                        </a>
+
+                        <a href="properties.html">
+                            Properties
+                        </a>
+
+                        <a href="projects.html">
+                            Projects
+                        </a>
+
+                        <a href="services.html">
+                            Services
+                        </a>
+
+                        <a href="about.html">
+                            About Us
+                        </a>
+
+                        <a href="contact.html">
+                            Contact Us
+                        </a>
+
+                    </div>
+
                 </div>
 
             </nav>
-        </div>
-    </header>
 
-        <main>
+        </div>
+
+    </header>
+    <main>
 
         <!-- Hero -->
         <section class="hero">
@@ -45,124 +80,115 @@
                 <div class="hero-content">
 
                     <span class="hero-eyebrow">
-                        التطوير العقاري
+                        Real Estate Development
                     </span>
 
                     <h1>
-                        حلول عقارية متكاملة لبناء مستقبل أفضل
+                        Complete Real Estate Solutions for a Better Future
                     </h1>
 
                     <p>
-                        منصة احترافية لعرض العقارات والمشاريع والخدمات العقارية
-                        بطريقة واضحة حديثة وقابلة للتوسع.
+                        A professional platform for showcasing properties, projects, and real estate services
+                        in a clear, modern, and scalable way.
                     </p>
 
                     <div class="hero-actions">
                         <a href="projects.html" class="btn btn-primary">
-                            استكشف المشاريع
+                            Explore Projects
                         </a>
 
                         <a href="properties.html" class="btn btn-secondary">
-                            تصفح العقارات
+                            Browse Properties
                         </a>
                     </div>
 
                 </div>
-
-            </div>
-        </section>
-
-
-        <!-- Properties -->
-                        <section class="section">
-            <div class="container">
-
-                <div class="section-header">
-
-                    <div>
-                        <span class="section-eyebrow">
-                            خدماتنا
-                        </span>
-
-                        <h2>
-                            خبرة عقارية متكاملة
-                        </h2>
-
-                    </div>
-
-                    <a href="services.html" class="section-link">
-                        جميع الخدمات
-                    </a>
-
-                </div>
-
-                <div
-                    id="featured-services"
-                    class="cards-grid cards-grid-3"
-                ></div>
-
-            </div>
-        </section>
-
-
-        <!-- Projects -->
-                <section class="section section-dark">
-            <div class="container">
-
-                <div class="section-header section-header-light">
-
-                    <div>
-                        <span class="section-eyebrow">
-                            مشاريع التطوير
-                        </span>
-
-                        <h2>
-                            مشاريع نصنع بها المستقبل
-                        </h2>
-                    </div>
-
-                    <a href="projects.html" class="section-link">
-                        جميع المشاريع
-                    </a>
-
-                </div>
-
-                <div
-                    id="featured-projects"
-                    class="cards-grid cards-grid-2"
-                ></div>
 
             </div>
         </section>
 
 
         <!-- Services -->
-                        <section class="section">
+        <section class="section">
             <div class="container">
 
                 <div class="section-header">
 
                     <div>
                         <span class="section-eyebrow">
-                            خدماتنا
+                            Our Services
                         </span>
 
                         <h2>
-                            خبرة عقارية متكاملة
+                            Integrated Real Estate Expertise
                         </h2>
 
                     </div>
 
                     <a href="services.html" class="section-link">
-                        جميع الخدمات
+                        All Services
                     </a>
 
                 </div>
 
-                <div
-                    id="featured-services"
-                    class="cards-grid cards-grid-3"
-                ></div>
+                <div id="featured-services" class="cards-grid cards-grid-3"></div>
+
+            </div>
+        </section>
+
+
+        <!-- Projects -->
+        <section class="section section-dark">
+            <div class="container">
+
+                <div class="section-header section-header-light">
+
+                    <div>
+                        <span class="section-eyebrow">
+                            Development Projects
+                        </span>
+
+                        <h2>
+                            Projects That Shape the Future
+                        </h2>
+                    </div>
+
+                    <a href="projects.html" class="section-link">
+                        All Projects
+                    </a>
+
+                </div>
+
+                <div id="featured-projects" class="cards-grid cards-grid-2"></div>
+
+            </div>
+        </section>
+
+
+        <!-- Services -->
+        <section class="section">
+            <div class="container">
+
+                <div class="section-header">
+
+                    <div>
+                        <span class="section-eyebrow">
+                            Our Services
+                        </span>
+
+                        <h2>
+                            Integrated Real Estate Expertise
+                        </h2>
+
+                    </div>
+
+                    <a href="services.html" class="section-link">
+                        All Services
+                    </a>
+
+                </div>
+
+                <div id="featured-services" class="cards-grid cards-grid-3"></div>
 
             </div>
         </section>
@@ -173,21 +199,24 @@
         <div class="container">
 
             <p>
-                © 2026 قالب التطوير العقاري. جميع الحقوق محفوظة.
+                © 2026 Real Estate Development Theme. All rights reserved.
             </p>
 
         </div>
     </footer>
 
     <script src="assets/js/core/config.js"></script>
-<script src="assets/js/core/utils.js"></script>
-<script src="assets/js/core/data.js"></script>
+    <script src="assets/js/core/utils.js"></script>
+    <script src="assets/js/core/data.js"></script>
 
-<script src="assets/js/modules/properties/properties.js"></script>
-<script src="assets/js/modules/projects/projects.js"></script>
-<script src="assets/js/modules/services/services.js"></script>
+    <script src="wp-content/themes/trade-sphare-real-estate/assets/js/components/site-components.js"></script>
 
-<script src="assets/js/core/app.js"></script>
+    <script src="assets/js/modules/properties/properties.js"></script>
+    <script src="assets/js/modules/projects/projects.js"></script>
+    <script src="assets/js/modules/services/services.js"></script>
+
+    <script src="assets/js/core/app.js"></script>
 
 </body>
+
 </html>

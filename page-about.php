@@ -5,16 +5,35 @@
  * @package Trade_Sphare_Real_Estate
  */
 
+defined( 'ABSPATH' ) || exit;
+
 get_header();
 
-$page_title     = get_the_title();
-$page_content   = get_the_content();
-$featured_image = get_the_post_thumbnail_url( get_the_ID(), 'large' );
+/**
+ * Page data.
+ */
+$page_id        = get_the_ID();
+$page_title     = get_the_title( $page_id );
+$page_content   = get_the_content( null, false, $page_id );
+
+/**
+ * Temporary featured image.
+ * Replace this URL later with the real WordPress featured image.
+ */
+$featured_image = 'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1200&q=80';
+
+/**
+ * Contact and projects URLs.
+ */
+$contact_url  = home_url( '/contact/' );
+$projects_url = home_url( '/projects/' );
 ?>
 
-<main>
+<main id="main-content" class="site-main">
 
-        <!-- About Hero -->
+        <!-- =========================================================
+             About Hero
+        ========================================================== -->
         <section class="page-hero">
                 <div class="container">
 
@@ -28,7 +47,7 @@ $featured_image = get_the_post_thumbnail_url( get_the_ID(), 'large' );
                                         <?php echo esc_html( $page_title ); ?>
                                 </h1>
 
-                                <?php if ( $page_content ) : ?>
+                                <?php if ( ! empty( $page_content ) ) : ?>
 
                                         <div class="page-hero-description">
                                                 <?php
@@ -55,7 +74,9 @@ $featured_image = get_the_post_thumbnail_url( get_the_ID(), 'large' );
         </section>
 
 
-        <!-- Vision -->
+        <!-- =========================================================
+             Vision
+        ========================================================== -->
         <section class="section">
                 <div class="container">
 
@@ -63,17 +84,24 @@ $featured_image = get_the_post_thumbnail_url( get_the_ID(), 'large' );
 
                                 <div class="property-detail-media">
 
-                                        <?php if ( $featured_image ) : ?>
+                                        <?php if ( ! empty( $featured_image ) ) : ?>
 
                                                 <img
                                                         src="<?php echo esc_url( $featured_image ); ?>"
                                                         alt="<?php echo esc_attr( $page_title ); ?>"
                                                         loading="lazy"
+                                                        decoding="async"
+                                                        width="1200"
+                                                        height="800"
                                                 >
 
                                         <?php else : ?>
 
-                                                <div class="media-placeholder">
+                                                <div
+                                                        class="media-placeholder"
+                                                        role="img"
+                                                        aria-label="Real Estate Development"
+                                                >
                                                         Real Estate Development
                                                 </div>
 
@@ -116,7 +144,9 @@ $featured_image = get_the_post_thumbnail_url( get_the_ID(), 'large' );
         </section>
 
 
-        <!-- Principles -->
+        <!-- =========================================================
+             Principles
+        ========================================================== -->
         <section class="section section-alt">
                 <div class="container">
 
@@ -142,7 +172,10 @@ $featured_image = get_the_post_thumbnail_url( get_the_ID(), 'large' );
 
                                 <article class="service-card">
 
-                                        <span class="service-detail-number">
+                                        <span
+                                                class="service-detail-number"
+                                                aria-hidden="true"
+                                        >
                                                 01
                                         </span>
 
@@ -161,7 +194,10 @@ $featured_image = get_the_post_thumbnail_url( get_the_ID(), 'large' );
 
                                 <article class="service-card">
 
-                                        <span class="service-detail-number">
+                                        <span
+                                                class="service-detail-number"
+                                                aria-hidden="true"
+                                        >
                                                 02
                                         </span>
 
@@ -180,7 +216,10 @@ $featured_image = get_the_post_thumbnail_url( get_the_ID(), 'large' );
 
                                 <article class="service-card">
 
-                                        <span class="service-detail-number">
+                                        <span
+                                                class="service-detail-number"
+                                                aria-hidden="true"
+                                        >
                                                 03
                                         </span>
 
@@ -199,7 +238,10 @@ $featured_image = get_the_post_thumbnail_url( get_the_ID(), 'large' );
 
                                 <article class="service-card">
 
-                                        <span class="service-detail-number">
+                                        <span
+                                                class="service-detail-number"
+                                                aria-hidden="true"
+                                        >
                                                 04
                                         </span>
 
@@ -221,7 +263,9 @@ $featured_image = get_the_post_thumbnail_url( get_the_ID(), 'large' );
         </section>
 
 
-        <!-- Expertise -->
+        <!-- =========================================================
+             Expertise
+        ========================================================== -->
         <section class="section">
                 <div class="container">
 
@@ -290,7 +334,9 @@ $featured_image = get_the_post_thumbnail_url( get_the_ID(), 'large' );
         </section>
 
 
-        <!-- CTA -->
+        <!-- =========================================================
+             CTA
+        ========================================================== -->
         <section class="section">
                 <div class="container">
 
@@ -319,15 +365,17 @@ $featured_image = get_the_post_thumbnail_url( get_the_ID(), 'large' );
                                 <div class="hero-actions">
 
                                         <a
-                                                href="<?php echo esc_url( home_url( '/contact/' ) ); ?>"
+                                                href="<?php echo esc_url( $contact_url ); ?>"
                                                 class="button button-primary"
+                                                aria-label="Contact Trade Sphare"
                                         >
                                                 Contact Us
                                         </a>
 
                                         <a
-                                                href="<?php echo esc_url( home_url( '/projects/' ) ); ?>"
+                                                href="<?php echo esc_url( $projects_url ); ?>"
                                                 class="button button-secondary"
+                                                aria-label="Explore Trade Sphare projects"
                                         >
                                                 Explore Our Projects
                                         </a>

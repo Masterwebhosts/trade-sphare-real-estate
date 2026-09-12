@@ -1,9 +1,9 @@
 <?php
 /**
- * Contact page template.
- *
- * @package Trade_Sphare_Real_Estate
- */
+* Contact page template. 
+*
+* @package Trade_Sphare_Real_Estate
+*/
 
 get_header();
 ?>
@@ -19,17 +19,17 @@ get_header();
 <div class="page-hero-content">
 
 <span class="section-eyebrow">
-تواصل معنا
+Contact Us
 </span>
 
 <h1>
-دعنا نتحدث عن مشروعك العقاري
+Let's Discuss Your Real Estate Project
 </h1>
 
 <p>
-سواء كنت تبحث عن فرصة استثمارية أو ترغب
-في تطوير مشروع جديد أو تحتاج إلى استشارة
-عقارية يسعدنا الاستماع إلى فكرتك.
+Whether you are looking for an investment opportunity,
+planning to develop a new project, or need real estate
+consulting, we would love to hear your ideas.
 </p>
 
 </div>
@@ -52,16 +52,16 @@ get_header();
 <aside class="contact-info">
 
 <span class="section-eyebrow">
-معلومات التواصل
+Contact Information
 </span>
 
 <h2>
-نحن هنا لمساعدتك
+We Are Here to Help
 </h2>
 
 <p class="contact-info-lead">
-أخبرنا بما تحتاج إليه وسيتولى فريقنا
-مراجعة طلبك والتواصل معك.
+Let us know what you need, and our team
+will review your request and get in touch with you.
 </p>
 
 
@@ -70,7 +70,7 @@ get_header();
 <div class="contact-info-item">
 
 <span class="contact-info-label">
-البريد الإلكتروني
+Email
 </span>
 
 <a href="mailto:info@example.com">
@@ -83,7 +83,7 @@ info@example.com
 <div class="contact-info-item">
 
 <span class="contact-info-label">
-الهاتف
+Phone
 </span>
 
 <a href="tel:+966500000000">
@@ -96,13 +96,13 @@ info@example.com
 <div class="contact-info-item">
 
 <span class="contact-info-label">
-ساعات العمل
+Business Hours
 </span>
 
 <span>
-الأحد – الخميس
+Sunday – Thursday
 <br>
-9:00 صباحا – 5:00 مساء
+9:00 AM – 5:00 PM
 </span>
 
 </div>
@@ -111,11 +111,11 @@ info@example.com
 <div class="contact-info-item">
 
 <span class="contact-info-label">
-الموقع
+Location
 </span>
 
 <span>
-المملكة العربية السعودية
+Kingdom of Saudi Arabia
 </span>
 
 </div>
@@ -132,15 +132,15 @@ info@example.com
 <div class="contact-form-header">
 
 <span class="section-eyebrow">
-أرسل استفسارك
+Send your inquiry
 </span>
 
 <h2>
-كيف يمكننا مساعدتك
+How can we help you?
 </h2>
 
 <p>
-املأ النموذج التالي وسنراجع طلبك.
+Fill out the form below, and we will review your request.
 </p>
 
 </div>
@@ -157,7 +157,7 @@ novalidate
 <div class="form-field">
 
 <label for="contact-name">
-الاسم
+Name
 <span aria-hidden="true">*</span>
 </label>
 
@@ -166,7 +166,7 @@ type="text"
 id="contact-name"
 name="name"
 autocomplete="name"
-placeholder="اكتب اسمك"
+placeholder="Enter your name"
 required
 minlength="2"
 >
@@ -182,7 +182,7 @@ data-error-for="name"
 <div class="form-field">
 
 <label for="contact-email">
-البريد الإلكتروني
+Email
 <span aria-hidden="true">*</span>
 </label>
 
@@ -206,7 +206,7 @@ data-error-for="email"
 <div class="form-field">
 
 <label for="contact-phone">
-رقم الهاتف
+Phone Number
 </label>
 
 <input
@@ -228,7 +228,7 @@ data-error-for="phone"
 <div class="form-field">
 
 <label for="contact-type">
-نوع الاستفسار
+Inquiry Type
 <span aria-hidden="true">*</span>
 </label>
 
@@ -239,31 +239,31 @@ required
 >
 
 <option value="">
-اختر نوع الاستفسار
+Select inquiry type
 </option>
 
 <option value="development">
-تطوير مشروع
+Project Development
 </option>
 
 <option value="investment">
-استثمار عقاري
+Real Estate Investment
 </option>
 
 <option value="property">
-شراء عقار
+Property Purchase
 </option>
 
 <option value="consulting">
-استشارة عقارية
+Real Estate Consulting
 </option>
 
 <option value="partnership">
-شراكة
+Partnership
 </option>
 
 <option value="other">
-استفسار آخر
+Other Inquiry
 </option>
 
 </select>
@@ -279,7 +279,7 @@ data-error-for="type"
 <div class="form-field form-field-full">
 
 <label for="contact-message">
-الرسالة
+Message
 <span aria-hidden="true">*</span>
 </label>
 
@@ -287,7 +287,7 @@ data-error-for="type"
 id="contact-message"
 name="message"
 rows="7"
-placeholder="اكتب تفاصيل مشروعك أو استفسارك..."
+placeholder="Write details about your project or inquiry..."
 required
 minlength="10"
 ></textarea>
@@ -314,14 +314,14 @@ aria-live="polite"
 type="submit"
 class="button button-primary contact-submit"
 >
-إرسال الاستفسار
+Send Inquiry
 </button>
 
 
 <p class="contact-form-note">
-في هذه المرحلة يتم التحقق من النموذج
-داخل المتصفح فقط. سيتم ربط الإرسال
-الفعلي بالـBackend لاحقا.
+At this stage, form validation occurs
+only within the browser. The actual
+submission will be connected to the backend later.
 </p>
 
 </form>
@@ -346,16 +346,16 @@ class="button button-primary contact-submit"
 <div>
 
 <span class="section-eyebrow">
-المشاريع والفرص
+Projects and Opportunities
 </span>
 
 <h2>
-تعرف على مشاريعنا العقارية
+Discover Our Real Estate Projects
 </h2>
 
 <p>
-استكشف المشاريع الحالية والقادمة
-وتعرف على فرص التطوير والاستثمار.
+Explore current and upcoming projects
+and learn about development and investment opportunities.
 </p>
 
 </div>
@@ -366,14 +366,14 @@ class="button button-primary contact-submit"
 href="<?php echo esc_url( home_url( '/projects/' ) ); ?>"
 class="button button-primary"
 >
-استكشف المشاريع
+Explore Projects
 </a>
 
 <a
 href="<?php echo esc_url( home_url( '/properties/' ) ); ?>"
 class="button button-secondary"
 >
-تصفح العقارات
+Browse Properties
 </a>
 
 </div>
